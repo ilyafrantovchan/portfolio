@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <div class="left-section">
+            <h1>myPORTFOLIO</h1>
+        </div>
+
+        <div class="right-section">
+            <nav>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#about-me">Обо мне</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#openModalBlog">Блог</a>
+            </nav>
+        </div>
+
+        <div class="middle-section">
+            <button>
+                <a href="#openModal">Нанять меня!</a>
+            </button>
+        </div>
+
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Анкета обратной связи</h3>
+                  <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">    
+                    <div class="forma">
+                        <div class="form-at">
+                            <div class="validate-input-at w-50" data-validate="Обязательное поле">
+                                <input class="input-at" type="text" name="name-at" placeholder="Ваше имя" />
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <div class="validate-input-at w-50" data-validate="Обязательное поле">
+                                <input class="input-at" type="text" name="email-at" placeholder="Ваш телефон" />
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <div class="validate-input-at" data-validate="Обязательное поле">
+                                <textarea class="input-at" name="message-at" placeholder="Ваше сообщение"></textarea>
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <input checked="checked" class="input-at" id="checkbox-at" type="checkbox" name="checkbox-at" onchange="document.getElementById('submit-at').disabled = !this.checked;" />
+                            <label for="checkbox-at">
+                                Настоящим подтверждаю, что я ознакомлен и согласен с <a href="#rules">пользовательским соглашением</a>
+                            </label> 
+                            <input type="hidden" name="subject-at" value="Тема формы">
+                            <button id="submit-at" class="form-at-btn">Отправить</button>
+                        </div>
+                        <div class="result-at"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div id="openModalBlog" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Мой блог</h3>
+                  <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">    
+                    <h3>Блог находится на стадии разработки! Приноcим свои извинения за доставленные неудобства</h3>
+                    <img src="images/under-construction.jpg" class="under-construction">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="openModalCV" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Скачать CV</h3>
+                  <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">    
+                    <h3>Начать загрузку:</h3>
+                    <button type="button" class="button" onclick="this.classList.toggle('button--loading')">
+                        <span class="button__text">Скачать</span>
+                    </button>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+
+
+
+    <main>
+        <div class="about-me">
+            <div class="about-me-column">
+                <div id="portfolio">
+                    <h1>Привет, я</h1>
+                    <h2>ИЛЬЯ ФРАНТОВЧАН</h2>
+                    <h3>Студент группы ИСП-2</h3>
+                    <p class="main-lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur consectetur, porro quos exercitationem voluptatum, non, optio distinctio repellat magni excepturi eos aspernatur et cumque nemo maxime minima nobis sit architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, accusantium. Illum, laborum maiores repellendus architecto, iusto animi assumenda quibusdam maxime totam alias, dicta ipsa quos voluptate? Odit veritatis iste rem.</p>
+                </div>
+                <div>
+                    <img class="quotes" src="images/quotes.png" alt="">
+                </div>
+                <div class="about-me-bottom">
+                    <button>
+                        <a href="#openModal" style="text-decoration: none; color: white;">Нанять меня!</a>
+                    </button>
+                    <p>или</p>
+
+                    <div class="download-cv">
+                        <button style="display: flex;">
+                            <a href="#openModalCV" style="text-decoration: none; color: white;">Cкачать CV</a>
+                            <img class="download-cv-button" src="icons/download-icon.png" alt="download">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="my-photo" src="images/photo1.png" alt="my photo">
+            </div>
+        </div>
+
+
+
+        <div class="some-about-me" id="about-me">
+            <div>
+                <img class="my-photo2" src="images/photo2.png">
+            </div>
+            <div>
+                <div>
+                    <h1>Немного</h1>
+                    <h2>Обо мне</h2>
+                    <p class="main-lorem">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, voluptates vel quas accusantium quam assumenda cupiditate placeat maxime rerum. Illo, fuga nulla? Fuga commodi harum iste quas? Reiciendis, modi! Quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odio minima expedita quasi repudiandae quis vel ducimus iste sed eaque enim alias delectus laudantium illum voluptate, quam asperiores culpa deserunt.
+                    </p>
+                </div>
+                <div class="socials">
+                    <img src="icons/facebook.png" alt="">
+                    <img src="icons/instagram.png" alt="">
+                    <img src="icons/twitter.png" alt="">
+                    <img src="icons/youtube.png" alt="">
+                </div>
+                <div class="about-me-bottom">
+                    <button>
+                        <a href="#openModal" style="text-decoration: none; color: white;">Нанять меня!</a>
+                    </button>
+                    <p>или</p>  
+                    <div class="download-cv">
+                        <button style="display: flex;">
+                            <a href="#openModalCV" style="text-decoration: none; color: white;">Cкачать CV</a>
+                            <img class="download-cv-button" src="icons/download-icon.png" alt="download">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <h1>А это</h1>
+        <h2 style="margin-bottom: 30px;" id="contacts">Анкета обратной связи</h2>
+        <div class="forma">
+            <div class="form-at">
+                <div class="validate-input-at w-50" data-validate="Обязательное поле">
+                    <input class="input-at" type="text" name="name-at" placeholder="Ваше имя" />
+                    <span class="focus-input-at"></span>
+                </div>
+                <div class="validate-input-at w-50" data-validate="Обязательное поле">
+                    <input class="input-at" type="text" name="email-at" placeholder="Ваш телефон или email" />
+                    <span class="focus-input-at"></span>
+                </div>
+                <div class="validate-input-at" data-validate="Обязательное поле">
+                    <textarea class="input-at" name="message-at" placeholder="Ваше сообщение"></textarea>
+                    <span class="focus-input-at"></span>
+                </div>
+                <input checked="checked" class="input-at" id="checkbox-at" type="checkbox" name="checkbox-at" onchange="document.getElementById('submit-at').disabled = !this.checked;" />
+                <label for="checkbox-at">
+                    Настоящим подтверждаю, что я ознакомлен и согласен с <a href="#rules">пользовательским соглашением</a>
+                </label> 
+                <input type="hidden" name="subject-at" value="Тема формы">
+                <button id="submit-at" class="form-at-btn">Отправить</button>
+            </div>
+            <div class="result-at"></div>
+        </div>
+    </main>
+
+    <footer>
+        <a><strong>Все права защищены</strong></a>
+        <a>Остались вопросы? - <u>email: portfolio@mail.ru, телефон: +89026503232</u></a>
+    </footer>
+</body>
+</html>
